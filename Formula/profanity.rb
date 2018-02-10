@@ -35,7 +35,8 @@ class Profanity < Formula
     system "./bootstrap.sh" if build.head?
     system "./configure", "--disable-dependency-tracking",
                           "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--enable-notifications"
     system "make", "install"
   end
 
